@@ -1,4 +1,4 @@
-# MLE module 3
+# MLE module 2
 This project build models to predict mean housing value.
 
 ## Table of Contents
