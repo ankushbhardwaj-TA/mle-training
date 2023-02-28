@@ -4,7 +4,9 @@ This project build models to predict mean housing value.
 ## Table of Contents
     - Requirements
     - Configuration and Installation
-    - Running python scripts
+    - Running individual python scripts
+    - Code Testing
+    - Running mlflow pipeline main.py
 
 ## Requirements
 No special requirements.
@@ -33,3 +35,22 @@ To run the files, move to the root directory:
 ```python --inp_train --out_pkl --out_score src/train.py``` Other optional arguments --log-level, --log_path, --no-console-log
 3. score.py
 ```python --model_dir --test_data_dir --output_dir src/train.py``` Other optional arguments --log-level, --log_path, --no-console-log
+
+## Code Testing (After running the python scripts)
+To test the code move to the root/tests/ directory then use the functional tests and unit tests as shown below:
+```
+pytest functional_tests/test_ingest_data.py
+```
+```
+python -m unittest unit_tests/unit_test_score.py
+```
+```
+python -m unittest unit_tests/unit_test_ingest_data.py
+```
+
+## Running mlflow pipeline main.py
+To run this file, go to the root folder. Then write commands to run main.py with or without arguments
+```
+python <optional arguments> src/main.py
+```
+This will run the entire pipeline. No need to run individual scripts...
